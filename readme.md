@@ -22,13 +22,14 @@ ADD     0x3     0b0011  : Add `a` register and add ram value of the operand addr
 JMP     0x4     0b0100  : Jump to address in uperand.
 CMP     0x5     0b0101  : If carry flag is set after `ADD` jump to address in uperand.
 
-PJP     0x6     0b0110  : Jump to first adress of a page defined in uperand.
-RSU     0x7     0b0111  : Set RAM page register to the uper (high byte) part of the page defined in operand.
-RSL     0x8     0b1000  : Set RAM page register to the lower (low byte) part of the page defined in operand.
-
-INP     0x9     0b1001  : Stops the clock from ticking and waits for a input. If input is given it will be 
+INP     0x6     0b0110  : Stops the clock from ticking and waits for a input. If input is given it will be 
                           stored at the address of the operand. Then it starts the clock and continues 
-OUT     0xa     0b1010  : Outputs what is stored in the operand's address
+OUT     0x7     0b0111  : Outputs what is stored in the operand's address
+
+PJP     0x8     0b1000  : Jump to first adress of a page defined in uperand.
+RSU     0x9     0b1001  : Set RAM page register to the uper (high byte) part of the page defined in operand.
+RSL     0xa     0b1010  : Set RAM page register to the lower (low byte) part of the page defined in operand.
+
 
 NOP     0xb     0b1011  : No instruction. Possible expansion
 NOP     0xc     0b1100  : No instruction. Possible expansion
