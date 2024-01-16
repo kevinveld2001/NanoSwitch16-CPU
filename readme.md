@@ -6,14 +6,16 @@ page is '0001'.
 
 ## Instruction set
 The instrucion is contained in a opcode and a operand.
-
+```
 0b 0000 0000
    [  ] [  ]
    |    L operand
    |
    L opcode
+```
 
-
+Instructions:
+```
 NOP     0x0     0b0000  : No instruction
 LDA     0x1     0b0001  : Load value from ram using the operand as the address. Into `a` register.
 STA     0x2     0b0010  : Store value from `a` register to address in operand.      
@@ -36,7 +38,7 @@ NOP     0xc     0b1100  : No instruction. Possible expansion
 NOP     0xd     0b1101  : No instruction. Possible expansion
 NOP     0xe     0b1110  : No instruction. Possible expansion
 NOP     0xf     0b1111  : No instruction. Possible expansion
-
+```
 
 ## registers
 
