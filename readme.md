@@ -41,10 +41,10 @@ NOP     0xf     0b1111  : No instruction. Possible expansion
 
 | name             | bits | explanation                                                                      |
 | ---------------- | ---- | -------------------------------------------------------------------------------- | 
-| `EXECUTE`        | 1    | Swaps every clock cycle and determines if it should fetch or execute.            |
+| `FETCH`          | 1    | Swaps every clock cycle and determines if it should fetch or execute.            |
 | `A`              | 4    | This register can be writen to and read from. It is also used for the ALU.       |
 | `CARRY`          | 1    | If add operation has a carry bit it will be set to `1` else to a `0`.            |
-| `instruction`    | 8    | After fetch this will hold the opcode and operand.                               |
+| `INSTRUCTION`    | 8    | After fetch this will hold the opcode and operand.                               |
 | `PROGRAM_PAGE`   | 4    | High byte address to define the current program execute page. default is `0`.    |
 | `RAM_PAGE`       | 4    | High byte address to define the current page where vars are stored. default: `1`.|
 | `RAM_SIDE`       | 1    | DEFINES if the processor should read/write to `LOW` or `HIGH` byte. default:`LOW`|
