@@ -274,6 +274,7 @@
       <a name="label" val="execute_puls"/>
     </comp>
     <comp lib="1" loc="(300,790)" name="NOT Gate"/>
+    <comp lib="1" loc="(300,830)" name="NOT Gate"/>
     <comp lib="1" loc="(420,1800)" name="AND Gate"/>
     <comp lib="1" loc="(420,1860)" name="AND Gate"/>
     <comp lib="1" loc="(420,1920)" name="AND Gate"/>
@@ -384,13 +385,13 @@
     <comp lib="8" loc="(1180,175)" name="Text">
       <a name="text" val="Instruction register"/>
     </comp>
-    <comp lib="8" loc="(1247,1359)" name="Text">
+    <comp lib="8" loc="(1245,1355)" name="Text">
       <a name="text" val="use Operand as address"/>
     </comp>
-    <comp lib="8" loc="(1709,242)" name="Text">
+    <comp lib="8" loc="(1705,240)" name="Text">
       <a name="text" val="instruction decoder"/>
     </comp>
-    <comp lib="8" loc="(1723,305)" name="Text">
+    <comp lib="8" loc="(1720,305)" name="Text">
       <a name="text" val="NOP"/>
     </comp>
     <comp lib="8" loc="(1725,350)" name="Text">
@@ -423,22 +424,22 @@
     <comp lib="8" loc="(1740,710)" name="Text">
       <a name="text" val="0111"/>
     </comp>
-    <comp lib="8" loc="(271,1613)" name="Text">
+    <comp lib="8" loc="(270,1610)" name="Text">
       <a name="text" val="enable write to a register"/>
     </comp>
-    <comp lib="8" loc="(283,1279)" name="Text">
+    <comp lib="8" loc="(280,1275)" name="Text">
       <a name="text" val="program page"/>
     </comp>
-    <comp lib="8" loc="(294,1044)" name="Text">
+    <comp lib="8" loc="(290,1040)" name="Text">
       <a name="text" val="ram page"/>
     </comp>
     <comp lib="8" loc="(310,745)" name="Text">
       <a name="text" val="fetch register"/>
     </comp>
-    <comp lib="8" loc="(709,1572)" name="Text">
+    <comp lib="8" loc="(705,1570)" name="Text">
       <a name="text" val="a register"/>
     </comp>
-    <comp lib="8" loc="(754,1394)" name="Text">
+    <comp lib="8" loc="(750,1390)" name="Text">
       <a name="text" val="ram side register"/>
     </comp>
     <comp loc="(840,220)" name="adder"/>
@@ -715,7 +716,7 @@
     <wire from="(200,700)" to="(200,830)"/>
     <wire from="(200,700)" to="(260,700)"/>
     <wire from="(200,830)" to="(200,870)"/>
-    <wire from="(200,830)" to="(320,830)"/>
+    <wire from="(200,830)" to="(270,830)"/>
     <wire from="(200,870)" to="(200,1090)"/>
     <wire from="(200,870)" to="(480,870)"/>
     <wire from="(230,1480)" to="(420,1480)"/>
@@ -734,8 +735,9 @@
     <wire from="(290,1750)" to="(290,2030)"/>
     <wire from="(290,2030)" to="(830,2030)"/>
     <wire from="(300,680)" to="(300,690)"/>
-    <wire from="(300,690)" to="(430,690)"/>
+    <wire from="(300,690)" to="(380,690)"/>
     <wire from="(300,790)" to="(320,790)"/>
+    <wire from="(300,830)" to="(320,830)"/>
     <wire from="(310,1670)" to="(380,1670)"/>
     <wire from="(310,1680)" to="(390,1680)"/>
     <wire from="(310,1690)" to="(400,1690)"/>
@@ -795,8 +797,9 @@
     <wire from="(380,1290)" to="(430,1290)"/>
     <wire from="(380,1560)" to="(380,1670)"/>
     <wire from="(380,1560)" to="(490,1560)"/>
-    <wire from="(380,640)" to="(380,760)"/>
+    <wire from="(380,640)" to="(380,690)"/>
     <wire from="(380,640)" to="(880,640)"/>
+    <wire from="(380,690)" to="(380,760)"/>
     <wire from="(380,760)" to="(390,760)"/>
     <wire from="(380,790)" to="(390,790)"/>
     <wire from="(380,830)" to="(390,830)"/>
@@ -834,9 +837,8 @@
     <wire from="(420,1920)" to="(580,1920)"/>
     <wire from="(420,1980)" to="(590,1980)"/>
     <wire from="(420,780)" to="(420,1020)"/>
-    <wire from="(430,560)" to="(430,690)"/>
+    <wire from="(430,560)" to="(430,830)"/>
     <wire from="(430,560)" to="(480,560)"/>
-    <wire from="(430,690)" to="(430,830)"/>
     <wire from="(440,160)" to="(1000,160)"/>
     <wire from="(440,160)" to="(440,520)"/>
     <wire from="(440,520)" to="(480,520)"/>
