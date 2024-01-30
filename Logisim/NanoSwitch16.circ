@@ -55,7 +55,7 @@
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="main"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="simulationFrequency" val="16.0"/>
+    <a name="simulationFrequency" val="8.0"/>
     <comp lib="0" loc="(1010,1200)" name="Splitter">
       <a name="facing" val="west"/>
       <a name="fanout" val="8"/>
@@ -143,8 +143,8 @@
       <a name="fanout" val="4"/>
       <a name="incoming" val="4"/>
     </comp>
-    <comp lib="0" loc="(1530,1500)" name="Tunnel">
-      <a name="label" val="clock"/>
+    <comp lib="0" loc="(1520,1500)" name="Tunnel">
+      <a name="label" val="clock_pulse"/>
     </comp>
     <comp lib="0" loc="(1610,1720)" name="Splitter">
       <a name="appear" val="right"/>
@@ -221,6 +221,9 @@
       <a name="label" val="fetch"/>
     </comp>
     <comp lib="0" loc="(560,580)" name="Power"/>
+    <comp lib="0" loc="(60,1130)" name="Tunnel">
+      <a name="label" val="clock_pulse"/>
+    </comp>
     <comp lib="0" loc="(600,400)" name="Splitter">
       <a name="appear" val="right"/>
       <a name="bit0" val="3"/>
@@ -255,9 +258,6 @@
       <a name="facing" val="west"/>
       <a name="fanout" val="4"/>
       <a name="incoming" val="4"/>
-    </comp>
-    <comp lib="0" loc="(80,1130)" name="Tunnel">
-      <a name="label" val="clock"/>
     </comp>
     <comp lib="0" loc="(870,2070)" name="Splitter">
       <a name="fanout" val="8"/>
@@ -798,7 +798,7 @@
     <comp lib="8" loc="(705,1570)" name="Text">
       <a name="text" val="a register"/>
     </comp>
-    <comp lib="8" loc="(736,1485)" name="Text">
+    <comp lib="8" loc="(735,1485)" name="Text">
       <a name="text" val="ram side register"/>
     </comp>
     <comp loc="(1780,1070)" name="full_adder"/>
@@ -1197,7 +1197,7 @@
     <wire from="(1510,1470)" to="(1530,1470)"/>
     <wire from="(1510,1480)" to="(1510,1500)"/>
     <wire from="(1510,1480)" to="(1600,1480)"/>
-    <wire from="(1510,1500)" to="(1530,1500)"/>
+    <wire from="(1510,1500)" to="(1520,1500)"/>
     <wire from="(1510,1660)" to="(1510,1680)"/>
     <wire from="(1520,1070)" to="(1520,1170)"/>
     <wire from="(1520,1170)" to="(1560,1170)"/>
@@ -1594,7 +1594,6 @@
     <wire from="(590,1830)" to="(600,1830)"/>
     <wire from="(60,1090)" to="(200,1090)"/>
     <wire from="(60,1090)" to="(60,1130)"/>
-    <wire from="(60,1130)" to="(80,1130)"/>
     <wire from="(600,400)" to="(600,700)"/>
     <wire from="(600,700)" to="(1100,700)"/>
     <wire from="(600,880)" to="(620,880)"/>
