@@ -18,4 +18,4 @@ halt:
 JMP halt
 
 @page(2)
-@dcb 1, 1
+@dcb(1, 1)
