@@ -14,5 +14,5 @@ JMP start
 halt:
 JMP halt
 
-;@page(2)
+@page(1)
 ;@dcb(1, 1)
