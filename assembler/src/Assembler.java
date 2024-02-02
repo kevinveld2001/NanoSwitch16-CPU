@@ -1,6 +1,8 @@
 import file.FileInput;
 import tokenizer.LineTokenizer;
 import tokens.LineToken;
+import utils.HexDumpUtil;
+import utils.PaddingUtil;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -19,11 +21,13 @@ public class Assembler {
         setOpcodeAddresses(lineTokens);
         Map<String, AtomicInteger> lableAddresses = getLableAddresses(lineTokens);
 
-        Byte[] machineCodes = assamble(lineTokens, lableAddresses);
+        byte[] machineCodes = assamble(lineTokens, lableAddresses);
+        PaddingUtil paddingUtil = new PaddingUtil(machineCodes);
+        machineCodes = paddingUtil.getWithPadding(256);
 
-        for (var machineCode : machineCodes) {
-            System.out.print(String.format("0x%02X ", machineCode));
-        }
+        HexDumpUtil hexDump = new HexDumpUtil(machineCodes);
+
+        System.out.println(hexDump);
 
     }
 
@@ -48,11 +52,16 @@ public class Assembler {
         return lableAddresses;
     }
 
-    private Byte[] assamble(ArrayList<LineToken> lineTokens, Map<String, AtomicInteger> lableAddresses) {
-        return lineTokens.stream()
+    private byte[] assamble(ArrayList<LineToken> lineTokens, Map<String, AtomicInteger> lableAddresses) {
+        Byte[] machinecodeObject =  lineTokens.stream()
                 .map(lineToken -> lineToken.getMachineCodes(lableAddresses))
                 .flatMapToInt(bytes -> java.util.stream.IntStream.range(0, bytes.length).map(i -> bytes[i]))
                 .mapToObj(value -> (byte) value)
                 .toArray(Byte[]::new);
+        byte[] machinecode = new byte[machinecodeObject.length];
+        for (int i = 0; i < machinecode.length; i++) {
+            machinecode[i] = (byte) machinecodeObject[i];
+        }
+        return machinecode;
     }
 }
