@@ -10,7 +10,10 @@ public class LineTokenizer {
     private ArrayList<LineToken> lineTokens = new ArrayList<>();
 
     public LineTokenizer(String rawCode) {
-        Pattern linePattern = Pattern.compile("(\\w+:\\s*)?(\\n\\s*)*((\\w{3}(\\s(\\d|\\w)+)?)|(@\\w+\\(.+\\)))(\\n|$)");
+        Pattern linePattern = Pattern.compile(
+                "^(\\w+:\\s*)?(\\n\\s*)*((\\w{3}(\\s(\\d|\\w)+)?)|(@\\w+\\(.+\\)))(\\n|$)",
+                Pattern.MULTILINE
+        );
         Matcher lines = linePattern.matcher(rawCode);
         while (lines.find()) {
             lineTokens.add(new LineToken(lines.group().trim()));
