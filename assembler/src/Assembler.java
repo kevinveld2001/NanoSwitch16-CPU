@@ -42,7 +42,7 @@ public class Assembler {
 
             lableAddresses.put(
                     lineToken.getLableToken().getLable(),
-                    new AtomicInteger((int) lineToken.getStartAddress())
+                    new AtomicInteger((int) lineToken.getStartAddress() % 16)
             );
         }
         return lableAddresses;
