@@ -18,8 +18,9 @@ public class LineToken implements Token {
                 case "page":
                     compilebleToken = new PageFunctionToken(function[1]);
                     break;
-//                case "dcb":
-//                    break;
+                case "define":
+                    compilebleToken = new DefineFunctionToken(function[1]);
+                    break;
 //                case "sub":
 //                    break;
                 default:

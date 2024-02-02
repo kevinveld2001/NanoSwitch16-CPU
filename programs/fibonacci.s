@@ -15,4 +15,4 @@ halt:
 JMP halt
 
 @page(1)
-;@dcb(1, 1)
+@define(1, 1)
