@@ -1,4 +1,5 @@
 import file.FileInput;
+import file.FileOutput;
 import tokenizer.LineTokenizer;
 import tokens.LineToken;
 import utils.HexDumpUtil;
@@ -26,8 +27,10 @@ public class Assembler {
         machineCodes = paddingUtil.getWithPadding(256);
 
         HexDumpUtil hexDump = new HexDumpUtil(machineCodes);
-
         System.out.println(hexDump);
+
+        FileOutput outputFile = new FileOutput(inputFileName);
+        outputFile.writeToFile(machineCodes);
 
     }
 
