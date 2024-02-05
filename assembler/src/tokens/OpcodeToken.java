@@ -6,14 +6,11 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class OpcodeToken implements Token {
     Opcode opcode;
     String param;
-    byte machineCodeLength = 1;
     byte machineCodeAddress = 0;
 
     public OpcodeToken(StringBuilder rawCode) {
         String[] splitOpcodes = rawCode.toString().split(" ", 2);
         opcode = Opcode.fromString(splitOpcodes[0]);
-        machineCodeLength = opcode.getOpcodeLenght();
-
         if (splitOpcodes.length > 1) {
             param = splitOpcodes[1];
         }
@@ -21,14 +18,13 @@ public class OpcodeToken implements Token {
 
     @Override
     public byte[] getMachineCodes(Map<String, AtomicInteger> lableAddresses) {
-        byte[] machineCodes = new byte[opcode.getOpcodeLenght()];
-        byte param = getParam(this.param, lableAddresses);
+        byte[] machineCodes = new byte[1];
+        byte param = 0;
+        if (this.param != null) {
+            param = getParam(this.param, lableAddresses);
+        }
         machineCodes[0] = (byte) (opcode.toMachineCode() + param);
 
-        //STA is edge case. It adds
-        if (opcode == Opcode.STA) {
-            machineCodes[1] = Opcode.NOP.toMachineCode();
-        }
         return machineCodes;
     }
 
@@ -54,6 +50,6 @@ public class OpcodeToken implements Token {
 
     @Override
     public byte getEndAddress() {
-        return (byte) (machineCodeAddress + machineCodeLength);
+        return (byte) (machineCodeAddress + 1);
     }
 }

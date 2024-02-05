@@ -18,8 +18,7 @@ Instructions:
 ```
 NOP     0x0     0b0000  : No instruction
 LDA     0x1     0b0001  : Load value from ram using the operand as the address. Into `a` register.
-STA     0x2     0b0010  : Store value from `a` register to address in operand. After storing, a `NOP` should
-                          be used to avoid unexpected behaviour.    
+STA     0x2     0b0010  : Store value from `a` register to address in operand.    
 ADD     0x3     0b0011  : Add `a` register and add ram value of the operand address. And put the result into 
                           the `a` register.
 JMP     0x4     0b0100  : Jump to address in uperand.
