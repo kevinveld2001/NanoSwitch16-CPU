@@ -1,19 +1,39 @@
 RSL 1
 start:
-LDA 0
-ADD 1
-CMP halt
-STA 2
+LDA a
+ADD b
+CMP reset
+STA c
 
-LDA 1
-STA 0
+LDA b
+STA a
 
-LDA 2
-STA 1
+LDA c
+STA b
 JMP start
 
-halt:
-JMP halt
+reset:
+PJP 2
+
 
 @page(1)
-@define(1, 1)
+a:
+@define(1)
+b:
+@define(1)
+c:
+@define(1)
+
+one:
+@define(1)
+null:
+@define(0)
+
+
+@page(2)
+LDA one
+STA a
+STA b
+LDA null
+STA c
+PJP 0
