@@ -1,3 +1,4 @@
+RSL 1
 start:
 LDA 0
 ADD 1
