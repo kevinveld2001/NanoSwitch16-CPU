@@ -26,14 +26,10 @@ c:
 
 one:
 @define(1)
-null:
-@define(0)
-
 
 @page(2)
 LDA one
 STA a
 STA b
-LDA null
 STA c
 PJP 0
