@@ -13,6 +13,10 @@ ADD one
 STA pointer
 STA write
 STA write_uper
+
+halt:
+CMP halt
+
 JMP start
 
 
