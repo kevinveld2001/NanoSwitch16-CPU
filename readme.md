@@ -1,4 +1,8 @@
 # NanoSwitch16
+
+![image](https://github.com/kevinveld2001/NanoSwitch16/assets/45532890/809fb790-b36f-4e0e-8b66-1d17ed580480)
+
+
 The NanoSwitch16 is a 4-bit CPU. The CPU has 16 pages of 16 bytes RAM. The CPU has a super small instruction
 set. It is enough to be Turing complete. however, this makes writing programs for it challenging. Additionally, it
 also has some instructions to make use of the 16 pages. You can use the pages for code, variables, or both.
